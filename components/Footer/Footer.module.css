@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
+  margin-top: 50px;
 }
 
 .nav-footer {
@@ -73,23 +74,12 @@
   margin-left: 85px;
 }
 
-
-@media (max-width: 1060px) {
-  .container-nav-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  .nav-footer__button {
-    margin: 0;
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .nav-footer__container-links {
     width: unset;
     margin: 0 40px;
     display: flex;
+    flex-direction: column;
     gap: 40px;
   }
 }
