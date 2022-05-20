@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Technologies
+ - Next.js
+ - React.js
+ - CSS modules
+ - Redis DB using Upstash integration
+ - Vercel cloud services
 
-## Getting Started
-
-First, run the development server:
-
+## Usage
+1.- Install deps
+```bash
+npm install
+```
+2.- Add a file named `.env` at root level containing:
+```bash
+REDIS_URL="<DB ACCESS KEY>"
+```
+3.- Run the server
 ```bash
 npm run dev
-# or
-yarn dev
 ```
+4.- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Backend endpoints
+ - [http://localhost:3000/api/tasks](http://localhost:3000/api/tasks). This endpoint can be edited in `pages/api/tasks/index.js`.
+ - [http://localhost:3000/api/tasks/:taskId](http://localhost:3000/api/tasks/:taskId). This endpoint can be edited in `pages/api/tasks/[taskId].js`.
+  
+## Frontend
+Just browse to [http://localhost:3000/](http://localhost:3000/)
+  
+## Production
+This repo has continuous integration with Vercel, every commit pushed to master will trigger a deploy
+You can browse the production site @ [https://nextjs-redis-todo.vercel.app/](https://nextjs-redis-todo.vercel.app/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## For ease of understanding of how task are created, deleted and stored
+- This happens inside this endpoint: [http://localhost:3000/api/tasks](http://localhost:3000/api/tasks)
+![Screen Shot 2022-05-20 at 11 31 52](https://user-images.githubusercontent.com/8002535/169550763-0774e577-8f41-498c-b8f7-f9c8b013f197.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
