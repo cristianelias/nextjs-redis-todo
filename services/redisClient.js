@@ -1,9 +1,10 @@
+import "dotenv/config";
 import Redis from "ioredis";
 const logger = require("pino")();
 
 class RedisClient {
   constructor() {
-    this.redis = new Redis();
+    this.redis = new Redis(process.env["REDIS_URL"] || "");
     this.redis.on("error", (err) => redisLogger.error(err));
     this.logger = logger.child({ operation: "redis" });
   }
