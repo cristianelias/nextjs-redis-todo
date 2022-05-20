@@ -1,5 +1,5 @@
 // Dependencies
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import axios from "axios";
 
 // Context
