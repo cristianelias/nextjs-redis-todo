@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: flow nowrap;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.button {
+  padding: 15px 20px;
+  font-size: 30px;
+  color: #1fc4db;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.number-wrapper {
+  padding: 10px 25px;
+}
+
+.number {
+  font-size: 23px;
+}
+

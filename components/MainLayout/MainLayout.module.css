@@ -1,0 +1,32 @@
+.container-home {
+  display: grid;
+  grid-template-columns: 11.5% 77% 11.5%;
+}
+
+.container-content {
+  grid-column: 2/3;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 15% 65% 20%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eeeff4;
+  border-radius: 10px;
+  margin: 100px 0;
+  padding: 90px 30px;
+}
+
+@media (max-width: 750px) {
+  .container-home {
+    display: inline;
+  }
+
+  .main-container {
+    margin: 50px 30px;
+    padding: 65px 20px;
+  }
+}

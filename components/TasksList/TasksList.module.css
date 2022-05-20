@@ -1,0 +1,36 @@
+
+.main-container__title {
+  margin-bottom: 20px;
+}
+.main-container__title,
+.main-container__description {
+  text-align: center;
+}
+
+.main-container__description {
+  color: #7d828f;
+}
+
+.section-cards {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  .main-container__title {
+    font-size: 25px;
+  }
+
+  .main-container__description {
+    font-size: 14px;
+  }
+
+  .section-cards {
+    margin-top: 47px;
+  }
+}

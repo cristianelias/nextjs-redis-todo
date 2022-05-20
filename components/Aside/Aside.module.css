@@ -1,0 +1,41 @@
+.page-index-container {
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.page-index {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  right: 50%;
+}
+
+.page-index__line {
+  width: 104px;
+  height: 1px;
+  background: #c8ccd8;
+  position: absolute;
+  top: 10px;
+  left: -153px;
+}
+
+.page-index__text {
+  -webkit-user-select: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 15px;
+  color: #c8ccd8;
+  flex-shrink: 0;
+}
+
+  @media (max-width: 750px) {
+    .page-index-container {
+      display: none;
+    }
+  }
